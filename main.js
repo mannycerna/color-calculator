@@ -4,7 +4,7 @@ const prompt = require('prompt-sync')({sigint: true});
 
 //Create array to hold possible outcomes
 let combInputs = ["red blue", "blue red", "red yellow", "yellow red", "blue yellow", "yellow blue"];
-let combOutputs = ["purple", "orange", "green", "error"];
+let combOutputs = ["purple", "orange", "green"];
 // let colorDecision = prompt('Thank you for choosing to use the WDI 101 Color Calculator. Please choose to "combine (c) or descontruct (d): ');
 
 //Let user know the possible colors
@@ -21,7 +21,9 @@ console.log(`You chose: ${userInput}.`);
 if (userInput === "")
     {console.log("Please input valid entry, blanks not allowed.")};
     
-//console.log(combInputs.includes("red blue") || ("blue red"));
+//rules for color combination or color deconstruction
+
+    //comination rules begin here......
 if ((combInputs.includes(userInput)) && userInput === ("red blue") || userInput === ("blue red")) {
     console.log("Your color combination is Purple!");
 } else if 
@@ -30,7 +32,7 @@ if ((combInputs.includes(userInput)) && userInput === ("red blue") || userInput 
     } else if 
         ((combInputs.includes(userInput)) && userInput === ("blue yellow") || userInput === ("yellow blue")) {
             console.log("Your color combination is Green!")
-        } else if 
+        } else if  //deconstruction rules begin here.....
          ((combOutputs.includes(userInput)) && userInput === "purple") {
             console.log("Your color deconstruction is red blue");
             } else if 
