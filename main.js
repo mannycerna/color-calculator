@@ -1,22 +1,23 @@
 
 
 const prompt = require('prompt-sync')({sigint: true});
+
+//Create array to hold possible outcomes
 let combInputs = ["red blue", "blue red", "red yellow", "yellow red", "blue yellow", "yellow blue"];
 let combOutputs = ["purple", "orange", "green", "error"];
 // let colorDecision = prompt('Thank you for choosing to use the WDI 101 Color Calculator. Please choose to "combine (c) or descontruct (d): ');
+
+//Let user know the possible colors
 console.log(`Possible inputs:  One color entry: ${combOutputs}`);
 console.log(`Possible inputs:  Two color entry: ${combInputs}`);
 
+//Prompt user for input
 let userInput = prompt("Enter a minumum of one or max of two colors: ").toLowerCase();
 
 //print out what user entered 
 console.log(`You chose: ${userInput}.`);
 
-//Create array to hold possible outcomes
-
-// console.log(combInputs.includes(userInput));
-// console.log(combOutputs.includes(userInput));
-
+//Handle blanks validation
 if (userInput === "")
     {console.log("Please input valid entry, blanks not allowed.")};
     
